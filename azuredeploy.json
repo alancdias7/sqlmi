@@ -10,19 +10,21 @@
     },
     "administratorLogin": {
       "type": "string",
+      "defaultValue": "adminsqlmi",
       "metadata": {
         "description": "Enter user name."
       }
     },
     "administratorLoginPassword": {
       "type": "securestring",
+      "defaultValue": "FPr0T3c@mi",
       "metadata": {
         "description": "Enter password."
       }
     },
     "location": {
       "type": "string",
-      "defaultValue": "[resourceGroup().location]",
+      "defaultValue": "RG-SQL",
       "metadata": {
         "description": "Enter location. If you leave this field blank resource group location would be used."
       }
@@ -68,7 +70,7 @@
     },
     "vCores": {
       "type": "int",
-      "defaultValue": 16,
+      "defaultValue": 8,
       "allowedValues": [
         8,
         16,
@@ -84,7 +86,7 @@
     },
     "storageSizeInGB": {
       "type": "int",
-      "defaultValue": 256,
+      "defaultValue": 32,
       "minValue": 32,
       "maxValue": 8192,
       "metadata": {
