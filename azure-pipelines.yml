@@ -10,6 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+Settings
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
@@ -20,4 +21,6 @@ steps:
     location: 'East US'
     templateLocation: 'Linked artifact'
     csmFile: 'sqlmi/azuredeploy.json'
+    overrideParameters: '-projectName ARMSQLMI01 -linkedTemplateUri https://raw.githubusercontent.com/alancdias7/sqlmi/main/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
+    deploymentName: 'DeploySQLMI'
